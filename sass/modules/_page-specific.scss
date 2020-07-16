@@ -1,0 +1,127 @@
+@import "mixins";
+@import "animations";
+@import "susy";
+
+/*
+ * Homepage
+ */
+
+// CSS for responsiveslides.js available from responsiveslides.com
+.rslides {
+  height: 700px;
+  background-color: #000;
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+
+  li {
+    @include backface-visibility(hidden);
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    &:first-child {
+      position: relative;
+      display: block;
+      float: left;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+  }
+}
+
+.showcase {
+  position:relative;
+
+  h2 {
+    font-size: 76px;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.75);
+    display: block;
+  }
+
+  &__actions{
+    animation-name: slide-in;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transform: translate(10%, -70%);
+    z-index: 4;
+
+  }
+
+  &__overlay {
+    height: 700px;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+
+    @include linear-gradient(rgba(0,0,0,0.4), transparent);
+   }
+ }
+
+ .upcoming-viewings {
+    background-color: #141414;
+    display: block;
+
+    &__content {
+      @include container(960px)
+      padding: 60px 0;
+      color: #fff;
+
+      &__listings {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 60px;
+
+        th {
+          background-color: #000;
+          border-bottom: solid 1px $primary-color;
+          padding: 30px 0;
+          width: 100%;
+        }
+
+        td {
+          padding: 10px 15px;
+        }
+
+        tr {
+          width: 100%;
+          background-color: #0c0c0c;
+          &:nth-child(odd) {
+            background-color:#000;
+          }
+          &:hover {
+            background-color: rgba(255,255,255,0.07);
+          }
+        }
+      }
+
+    h2 {
+        margin: 0 0 60px;
+        text-align: center;
+    }
+  }
+}
+
+ /*
+  * Misc
+  */
+::-moz-selection {
+  background-color:$primary-color;
+  color:#fff;
+}
+::selection {
+  background-color:$primary-color;
+  color:#fff;
+}

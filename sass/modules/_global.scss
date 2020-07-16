@@ -1,0 +1,51 @@
+@import "theme-settings";
+
+.nav {
+  background-color: #000;
+  height: 100px;
+
+  &__area {
+    margin-left: 40px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    line-height: 97px;
+    font-weight: 300;
+    font-size: 16px;
+
+    &:hover {
+      border-bottom: solid 3px $primary-color;
+    }
+  }
+
+  &__link:first-child {
+    padding-left: 0;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+footer {
+  .nav {
+    border-top: solid 1px $primary-color;
+
+    &__link {
+      &__back-to-top {
+        font-weight: 700;
+        float: right;
+      }
+      &:hover {
+        border-bottom: solid 3px transparent;
+        background-color: rgba(255,255,255,0.07);
+      }
+    }
+  }
+}

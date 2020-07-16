@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>MyCine | Editing Big Buck bunny</title>
+        <meta name="description" content="MyCine | Your go-to cinema for high quality experiences">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/admin.css">
+        <link rel="icon" href="favicon.png" type="image/png">
+        <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    </head>
+    <body>
+      <nav class="nav">
+        <a href="index.html" class="nav__link"><img src="../img/mycine-logo.png" alt="logo"/></a>
+      </nav>
+	  <div class="listings">
+		<h1>Editing Big Buck Bunny</h1>
+			<form name="listing" method="POST">
+				<div class="listings__input">
+					<label for="name">Name:</label>
+					<input class="listing__textbox" type="text" value="Big Buck Bunny">
+				</div>
+				<div class="listings__input">
+					<label for="U">U</label>
+					<input name="agerating" id="agerating__U" type="radio" checked>
+					<span class="radio"></span>
+					
+					<label for="agerating__PG">PG</label>
+					<input name="agerating" id="agerating__PG" type="radio">
+					
+					<label for="agerating__12">12</label>
+					<input name="agerating" id="agerating__12" type="radio">
+					
+					<label for="agerating__12A">12A</label>
+					<input name="agerating" id="agerating__12A" type="radio">
+					
+					<label for="agerating__15">15</label>
+					<input name="agerating" id="agerating__15" type="radio">
+					
+					<label for="PG">18</label>
+					<input id="PG" type="radio">
+				</div>
+				<div class="listings__input">
+					<label for="description">Description:</label>
+					<input name="description" class="listing__textbox" type="text" value="This is a description">
+				</div>
+				
+				<div class="listings__input">
+					<label for="trailer">Trailer embed:</label>
+					<input name="trailer_embed" class="listing__textbox" type="text" value="Embeded code will go here">
+				</div>
+				
+				<div class="listings__input">
+					<label for="trailer">Splash image:</label>
+					<input type="file" name="img_splash">
+				</div>
+								
+				<div class="listings__input">
+					<label for="thumbnail">Thumbnail image:</label>
+					<input type="file" name="img_thumbnail">
+				</div>
+				
+				<div class="listings__input">
+					<label for="screen_1">Screen 1</label>
+					<input name="screen" id="screen_1" type="radio" checked>
+					<span class="radio"></span>
+					
+					<label for="screen_2">Screen 2</label>
+					<input name="screen" id="screen_2" type="radio">
+					<span class="radio"></span>
+					
+					<label for="screen_3">Screen 3</label>
+					<input name="screen" id="screen_3" type="radio">
+					<span class="radio"></span>
+					
+					<label for="screen_4">Screen 4</label>
+					<input name="screen" id="screen_4" type="radio">
+					<span class="radio"></span>				
+				</div>
+				
+				<input class="listing__button right" type="submit" value="Commit">
+			</form>
+	  </div>
+    </body>
+</html>

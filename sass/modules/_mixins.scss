@@ -1,0 +1,11 @@
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  backface-visibility: $value;
+}
+
+@mixin linear-gradient($color1, $color2) {
+  background: -webkit-linear-gradient($color1, $color2);
+  background: -o-linear-gradient($color1, $color2);
+  background: -moz-linear-gradient($color1, $color2);
+  background: linear-gradient($color1, $color2);
+}
